@@ -90,6 +90,17 @@ const ProjectsSection = () => {
             </AnimatePresence>
           </Col>
         </Row>
+
+        {/* Robin Sharma Daily Improvement Quote */}
+        <m.div className="max-w-4xl mx-auto mt-16 p-8 bg-gray-50 rounded-2xl border border-gray-200 text-center relative overflow-hidden shadow-sm" {...fadeIn}>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-cyan-600 rounded-full"></div>
+          <p className="font-serif text-lg md:text-xl italic text-darkgray leading-relaxed mb-3">
+            “Small daily improvements over time lead to stunning results.”
+          </p>
+          <footer className="font-serif text-xs md:text-sm font-bold uppercase tracking-widest text-cyan-700">
+            — Robin Sharma
+          </footer>
+        </m.div>
       </Container>
     </section>
   );

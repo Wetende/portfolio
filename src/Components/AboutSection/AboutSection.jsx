@@ -69,13 +69,12 @@ const AboutSection = () => {
                   </span>
                 ))}
               </div>
-              <blockquote className="mt-10 p-6 bg-white rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-cyan-600"></div>
-                <p className="font-serif text-lg md:text-xl italic leading-relaxed text-darkgray font-medium !mb-0">
-                  “Small daily improvements over time lead to stunning results.”
+              <blockquote className="mt-10 border-l-4 border-darkgray pl-6 sm:pl-5">
+                <p className="font-serif text-lg italic leading-relaxed text-darkgray !mb-0">
+                  “Consider well the seed that gave you birth: you were not made to live as brutes, but to be followers of worth and knowledge.”
                 </p>
-                <footer className="mt-3 font-serif text-sm md:text-base text-gray-500 font-semibold tracking-wide uppercase">
-                  — Robin Sharma
+                <footer className="mt-3 font-serif text-base text-spanishgray">
+                  <span aria-hidden="true">— </span>Dante
                 </footer>
               </blockquote>
             </m.div>
