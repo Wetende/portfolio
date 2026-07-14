@@ -1,0 +1,123 @@
+import React, { useState, useEffect } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Container } from 'react-bootstrap';
+import { navItems } from '../../data/portfolioData';
+import profileLogo from '../../Assets/img/profile-logo.webp';
+
+const StickyHeader = ({ activeSection, onNavClick }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (sectionId) => {
+    if (onNavClick) onNavClick(sectionId);
+    setIsMobileMenuOpen(false);
+  };
+
+  return (
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+      }`}
+    >
+      <Container>
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer"
+          >
+            <span className="flex items-center gap-3">
+              <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                <img
+                  src={profileLogo}
+                  alt="Cyprian Wetende"
+                  className="h-full w-full object-cover"
+                />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="font-serif text-lg font-semibold text-darkgray">Cyprian Wetende</span>
+                <span className="mt-0.5 text-xs font-medium text-spanishgray">Software Engineer</span>
+              </span>
+            </span>
+          </ScrollLink>
+
+          {/* Desktop Navigation */}
+          <nav className="flex sm:hidden items-center gap-8">
+            {navItems.map((item) => (
+              <ScrollLink
+                key={item.id}
+                to={item.id}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                onClick={() => handleNavClick(item.id)}
+                className={`cursor-pointer font-medium text-sm uppercase tracking-wider transition-colors duration-200 ${
+                  activeSection === item.id
+                    ? 'text-cyan-600'
+                    : 'text-darkgray hover:text-cyan-600'
+                }`}
+              >
+                {item.label}
+              </ScrollLink>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="hidden sm:flex flex-col gap-1.5 p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+          >
+            <span className={`block w-6 h-0.5 bg-darkgray transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-darkgray transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-0.5 bg-darkgray transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <nav
+          id="mobile-navigation"
+          className={`hidden sm:block overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+          }`}
+        >
+          <div className="flex flex-col gap-4 py-4 border-t border-gray-200">
+            {navItems.map((item) => (
+              <ScrollLink
+                key={item.id}
+                to={item.id}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                onClick={() => handleNavClick(item.id)}
+                className={`cursor-pointer font-medium text-sm uppercase tracking-wider transition-colors duration-200 ${
+                  activeSection === item.id
+                    ? 'text-cyan-600'
+                    : 'text-darkgray hover:text-cyan-600'
+                }`}
+              >
+                {item.label}
+              </ScrollLink>
+            ))}
+          </div>
+        </nav>
+      </Container>
+    </header>
+  );
+};
+
+export default StickyHeader;

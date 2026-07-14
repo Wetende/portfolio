@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="cwGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background Rounded Square -->
+  <rect x="24" y="24" width="464" height="464" rx="120" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="12" filter="url(#shadow)" />
+
+  <!-- Monogram Group -->
+  <g filter="url(#shadow)">
+    <!-- Letter C -->
+    <path d="M 235,168 C 215,150 188,140 160,140 C 96,140 54,192 54,256 C 54,320 96,372 160,372 C 188,372 215,362 235,344 L 210,310 C 196,322 178,330 160,330 C 120,330 94,296 94,256 C 94,216 120,182 160,182 C 178,182 196,190 210,202 Z" fill="url(#cwGradient)" />
+
+    <!-- Letter W -->
+    <path d="M 230,148 L 268,300 L 305,182 L 342,300 L 380,148 L 424,148 L 366,368 L 322,368 L 286,242 L 250,368 L 206,368 L 186,148 Z" fill="url(#accentGradient)" />
+  </g>
+</svg>
