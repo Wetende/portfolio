@@ -45,10 +45,11 @@ export const aboutData = {
   bio: 'With a comprehensive background spanning IT engineering, enterprise architecture, and AI integrations, I design and deliver practical digital platforms that solve complex operational problems. My work focuses on high-availability system reliability, secure cross-border fintech workflows, and transforming technical requirements into scalable, real-world solutions.',
   yearsExperience: 5,
   specializations: [
+    'Frontend & Product Design',
+    'JavaScript / React.js SPA',
+    'AI Workflow & Automation',
+    'Fintech & API Design',
     'IT Systems & Support',
-    'AI & Data Operations',
-    'Full-Stack Platforms',
-    'Fintech & Payments',
     'Technical Communication'
   ]
 };
@@ -56,19 +57,19 @@ export const aboutData = {
 // Skills Data (card-based layout - zero image)
 export const skillsData = [
   {
+    icon: 'fas fa-code',
+    title: 'Frontend & Product Design',
+    description: 'Building responsive Single-Page Applications (SPAs) and product interfaces using JavaScript (ES6+), React.js, Vite, modern CSS, and custom CMS/LMS platforms.'
+  },
+  {
     icon: 'fas fa-robot',
-    title: 'AI & LLM Integration',
-    description: 'AI agent orchestration, LLM integration, and Retrieval-Augmented Generation (RAG) using vector embeddings and custom knowledge bases.'
+    title: 'AI Workflow & Automation',
+    description: 'AI agent orchestration, Zapier/Make automations, LLM integration, and Retrieval-Augmented Generation (RAG) using vector embeddings and custom knowledge bases.'
   },
   {
     icon: 'fas fa-wallet',
-    title: 'Fintech Gateways',
-    description: 'Engineering secure payment rails including Paystack, DPO, mobile money APIs (M-Pesa), EVM wallet connectivity, and USSD cross-border remittances.'
-  },
-  {
-    icon: 'fas fa-code',
-    title: 'Full-Stack Web Dev',
-    description: 'Building high-performance, responsive web applications and custom CMS/LMS platforms using Python, JavaScript, HTML5/CSS3, and modern frameworks.'
+    title: 'Fintech & API Design',
+    description: 'Engineering secure payment rails including Paystack, DPO, M-Pesa APIs, RESTful API design, EVM wallets, and USSD cross-border remittances.'
   },
   {
     icon: 'fas fa-server',
@@ -78,12 +79,12 @@ export const skillsData = [
   {
     icon: 'fas fa-database',
     title: 'Data & AI Operations',
-    description: 'Detailed data annotation, image labeling, NLP dataset validation, and machine learning pipeline evaluation ensuring high model accuracy.'
+    description: 'Detailed data annotation, image labeling, NLP dataset validation, process mapping, and machine learning pipeline evaluation ensuring high accuracy.'
   },
   {
     icon: 'fas fa-file-alt',
     title: 'Technical Communication',
-    description: 'Translating intricate business requirements into clear technical specifications, system architecture guidelines, and executive presentations.'
+    description: 'Translating intricate business requirements into clear technical specifications, system architecture guidelines, SOPs, and executive presentations.'
   }
 ];
 
@@ -108,11 +109,11 @@ export const projectsData = [
   {
     id: '2',
     slug: 'crossview',
-    title: 'CrossView – Canonical Multi-Tenant LMS Engine',
+    title: 'CrossView – Canonical LMS Engine',
     category: ['Full-Stack Development', 'Backend Systems', 'Containerization', 'Web Infrastructure', 'LMS Engine'],
     icon: 'fas fa-graduation-cap',
-    metric: 'Canonical Shared Engine · Multi-Tenant',
-    description: 'Canonical parent LMS shared engine and multi-tenant educational academy platform governing course builder architectures, student progression tracking, prerequisites, drip access scheduling, and unified institute assessment pipelines.',
+    metric: 'Canonical Shared Engine · Scalable Architecture',
+    description: 'Canonical parent LMS shared engine and educational academy platform governing course builder architectures, student progression tracking, prerequisites, drip access scheduling, and unified institute assessment pipelines.',
     techStack: [
       { name: 'Python', color: '#3776AB' },
       { name: 'Django', color: '#092E20' },
@@ -156,17 +157,26 @@ export const projectsData = [
   {
     id: '5',
     slug: 'kyrochat',
-    title: 'KyroChat – Multi-Tenant AI Agent Platform',
-    category: ['AI/ML Integration', 'Full-Stack Development', 'Backend Systems', 'Asynchronous Programming', 'Web Infrastructure'],
+    title: 'KyroChat – AI Agent & Automation Platform',
+    category: [
+      'AI/ML Integration',
+      'AI Automation',
+      'Product Design',
+      'API Design',
+      'Full-Stack Development',
+      'Backend Systems',
+      'Web Infrastructure'
+    ],
     icon: 'fas fa-robot',
     metric: 'Shared Bot Core · Omnichannel RAG',
-    description: 'Enterprise multi-tenant AI agent platform for customer support and operations, built around a shared bot core with custom knowledge vector retrieval, guardrails, and multi-channel adapters (Website Widget, WhatsApp, Slack).',
+    description: 'Enterprise AI agent and automation platform for customer support and operations, built around a shared bot core with custom knowledge vector retrieval, guardrails, and multi-channel adapters (Website Widget, WhatsApp, Slack).',
     techStack: [
       { name: 'Python', color: '#3776AB' },
       { name: 'FastAPI', color: '#009688' },
-      { name: 'Next.js', color: '#000000' },
-      { name: 'Vector Retrieval', color: '#FF6F00' },
-      { name: 'WebSockets', color: '#E91E63' }
+      { name: 'JavaScript / ES6+', color: '#F7DF1E' },
+      { name: 'React / Next.js', color: '#61DAFB' },
+      { name: 'AI Automation', color: '#FF6F00' },
+      { name: 'Vector Retrieval', color: '#E91E63' }
     ]
   }
 ];

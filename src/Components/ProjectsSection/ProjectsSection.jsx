@@ -10,6 +10,9 @@ const ProjectsSection = () => {
 
   const categories = [
     'All',
+    'AI Automation',
+    'Product Design',
+    'API Design',
     'Fintech Solutions',
     'Full-Stack Development',
     'Backend Systems',
@@ -40,8 +43,8 @@ const ProjectsSection = () => {
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-darkgray mb-4 tracking-tight">
             Featured Projects
           </h2>
-          <p className="font-serif text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A selection of real-world fintech payment gateways, canonical multi-tenant LMS architectures, and omnichannel AI platforms engineered for scale across African and global ecosystems.
+          <p className="font-serif text-sm md:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            A selection of real-world fintech payment gateways, canonical LMS architectures, and omnichannel AI platforms engineered for scale across African and global ecosystems.
           </p>
         </m.div>
 
