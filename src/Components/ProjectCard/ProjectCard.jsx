@@ -12,12 +12,12 @@ const ProjectCard = ({ project }) => {
       exit={{ opacity: 0, y: -15 }}
       transition={{ duration: 0.35 }}
     >
-      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3.5">
-        <div className="flex items-center gap-3.5">
+      <div className="flex flex-col gap-3 mb-3.5">
+        <div className="flex items-start gap-3.5 min-w-0">
           <span className="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200/70 flex items-center justify-center text-cyan-600 text-2xl shadow-sm shrink-0 group-hover:scale-105 transition-transform duration-300">
             <i className={icon || 'fas fa-layer-group'}></i>
           </span>
-          <h3 className="font-serif font-bold text-xl md:text-2xl text-darkgray tracking-tight group-hover:text-cyan-600 transition-colors duration-200">
+          <h3 className="font-serif font-bold text-xl text-darkgray tracking-tight group-hover:text-cyan-600 transition-colors duration-200 min-w-0">
             {title}
           </h3>
         </div>

@@ -50,8 +50,8 @@ const ProjectsSection = () => {
 
         {/* Project List Divider & Filter Pills */}
         <div className="max-w-5xl mx-auto mb-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between pb-4 mb-6 border-b border-gray-200 gap-4">
-            <h3 className="font-serif font-bold text-xl md:text-2xl text-darkgray">
+          <div className="flex flex-col pb-4 mb-6 border-b border-gray-200 gap-4">
+            <h3 className="font-serif font-bold text-2xl sm:text-xl text-darkgray shrink-0">
               Project List
             </h3>
             <div className="flex flex-wrap items-center gap-2">
