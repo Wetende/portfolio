@@ -43,10 +43,10 @@ const SkillsSection = () => {
           <div className="w-16 h-1 bg-cyan-600 mx-auto mt-4 rounded-full"></div>
         </m.div>
 
-        {/* Skills Grid - 3 cards per row, 2 rows */}
+        {/* Skills Grid - 3 cards per row on desktop, 2 on tablet, 1 on mobile */}
         <Row className="g-4 justify-content-center">
           {skillsData.map((skill, index) => (
-            <Col key={skill.title} xs={6} md={4}>
+            <Col key={skill.title} xs={12} sm={6} lg={4}>
               <SkillCard
                 icon={skill.icon}
                 title={skill.title}

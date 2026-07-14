@@ -52,7 +52,7 @@ const StickyHeader = ({ activeSection, onNavClick }) => {
           </ScrollLink>
 
           {/* Desktop Navigation */}
-          <nav className="flex sm:hidden items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <ScrollLink
                 key={item.id}
@@ -75,7 +75,7 @@ const StickyHeader = ({ activeSection, onNavClick }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="hidden sm:flex flex-col gap-1.5 p-2"
+            className="flex md:hidden flex-col gap-1.5 p-2.5 min-h-[44px] min-w-[44px] items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
@@ -90,8 +90,8 @@ const StickyHeader = ({ activeSection, onNavClick }) => {
         {/* Mobile Navigation */}
         <nav
           id="mobile-navigation"
-          className={`hidden sm:block overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'max-h-96 mt-4 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="flex flex-col gap-4 py-4 border-t border-gray-200">
@@ -104,9 +104,9 @@ const StickyHeader = ({ activeSection, onNavClick }) => {
                 offset={-80}
                 duration={500}
                 onClick={() => handleNavClick(item.id)}
-                className={`cursor-pointer font-medium text-sm uppercase tracking-wider transition-colors duration-200 ${
+                className={`cursor-pointer font-medium text-sm uppercase tracking-wider transition-colors duration-200 py-2 block ${
                   activeSection === item.id
-                    ? 'text-cyan-600'
+                    ? 'text-cyan-600 font-semibold'
                     : 'text-darkgray hover:text-cyan-600'
                 }`}
               >

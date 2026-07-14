@@ -56,7 +56,7 @@ const AboutSection = () => {
               <h2 className="font-serif font-bold text-3xl md:text-4xl text-darkgray mb-6 leading-tight">
                 Cyprian <span className="text-cyan-600">Wetende</span>
               </h2>
-              <p className="font-serif text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="font-serif text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
                 {bio}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -69,11 +69,11 @@ const AboutSection = () => {
                   </span>
                 ))}
               </div>
-              <blockquote className="mt-10 border-l-4 border-darkgray pl-6 sm:pl-5">
-                <p className="font-serif text-lg italic leading-relaxed text-darkgray !mb-0">
+              <blockquote className="mt-10 border-l-4 border-darkgray pl-4 sm:pl-6">
+                <p className="font-serif text-base sm:text-lg italic leading-relaxed text-darkgray !mb-0">
                   “Consider well the seed that gave you birth: you were not made to live as brutes, but to be followers of worth and knowledge.”
                 </p>
-                <footer className="mt-3 font-serif text-base text-spanishgray">
+                <footer className="mt-3 font-serif text-sm sm:text-base text-spanishgray">
                   <span aria-hidden="true">— </span>Dante
                 </footer>
               </blockquote>

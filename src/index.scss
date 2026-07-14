@@ -1,2 +1,29 @@
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile Responsiveness & Safe Area Overrides */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root, .App {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100%;
+}
+
+/* Ensure images and media never overflow container width */
+img, video, iframe, svg, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure tap targets on mobile meet accessibility guidelines where applicable */
+@media (max-width: 767px) {
+  button, [role="button"], input[type="submit"], input[type="button"] {
+    min-height: 44px;
+  }
+}
