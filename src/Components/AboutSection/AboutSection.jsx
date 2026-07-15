@@ -48,7 +48,7 @@ const AboutSection = () => {
       <Container>
         <Row className="items-center">
           {/* Left Column - Bio */}
-          <Col lg={6} className="mb-12 lg:mb-0">
+          <Col xs={12} lg={6} className="mb-12 lg:mb-0">
             <m.div {...fadeIn}>
               <p className="font-serif text-sm uppercase tracking-widest text-cyan-600 mb-4">
                 About Me
@@ -81,12 +81,12 @@ const AboutSection = () => {
           </Col>
 
           {/* Right Column - Competency Highlights Grid (Zero-Image) */}
-          <Col lg={6}>
+          <Col xs={12} lg={6}>
             <m.div
-              className="flex items-center justify-center lg:justify-end"
+              className="flex w-full items-center justify-center"
               {...{ ...fadeInLeft, transition: { delay: 0.3, duration: 0.5 } }}
             >
-              <div className="w-full max-w-lg space-y-3.5">
+              <div className="w-full space-y-3.5">
                 {/* Hero Experience Card */}
                 <div className="bg-[#0f172a] text-white p-4 md:p-5 rounded-2xl shadow-xl border border-slate-700/80 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>

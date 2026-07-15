@@ -1,2 +1,14 @@
 @tailwind components;
 @tailwind utilities;
+
+/* Keep portfolio typography consistent across inherited and utility-styled text. */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}

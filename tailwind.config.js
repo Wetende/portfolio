@@ -11,7 +11,7 @@ module.exports = {
       'mxl': { 'raw': '(min-width: 1921px)' },
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      sans: ['Poppins', 'sans-serif'],
       serif: ['Poppins', 'sans-serif'],
     },
     extend: {
