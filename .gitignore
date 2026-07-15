@@ -28,8 +28,7 @@ Thumbs.db
 .vscode/
 
 ### Environment & local config
-.env
-.env.*
+.env*
 .env.local
 .env.development.local
 .env.test.local
@@ -40,6 +39,5 @@ Thumbs.db
 *.swo
 .eslintcache
 .cache/
-
 
 
