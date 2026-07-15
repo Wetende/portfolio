@@ -12,6 +12,10 @@ dist/
 # testing / coverage
 coverage/
 
+# Playwright browser artifacts
+.playwright-cli/
+output/playwright/
+
 ### Logs
 logs/
 *.log
@@ -36,7 +40,6 @@ Thumbs.db
 *.swo
 .eslintcache
 .cache/
-
 
 
 
