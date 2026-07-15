@@ -45,44 +45,37 @@ const ContactSection = () => {
 
         <Row className="justify-center">
           <Col lg={8} xl={7}>
-            {/* Simple email CTA instead of form */}
+            {/* Direct contact actions */}
             <m.div
-              className="space-y-6 text-center md:space-y-7"
+              className="flex flex-wrap items-center justify-center gap-3.5 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <p className="mx-auto max-w-xl font-serif text-base leading-relaxed text-gray-600 md:text-lg">
-                Prefer to reach out directly? Click the button below to open your email client with a
-                prefilled message and I&apos;ll get back to you as soon as possible.
-              </p>
-
               <a
                 href={`mailto:${email}?subject=${encodeURIComponent(
                   'Project inquiry from portfolio'
                 )}&body=${encodeURIComponent('Hi Cyprian,\n\nI would like to discuss an engineering collaboration...')}`}
                 className="inline-flex min-h-14 items-center justify-center rounded-full bg-cyan-600 px-8 py-4 font-serif font-semibold uppercase tracking-[0.12em] text-white shadow-lg shadow-cyan-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-darkgray hover:text-white"
               >
+                <i className="fas fa-envelope mr-2.5 text-sm" aria-hidden="true" />
                 Email Me
               </a>
 
-              <p className="font-serif text-sm text-gray-500">
-                You can also{' '}
-                <a
-                  href={linkedInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-600 hover:text-darkgray transition-colors underline"
-                >
-                  message me on LinkedIn
-                </a>
-                .
-              </p>
+              <a
+                href={linkedInUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-cyan-600 bg-white px-8 py-4 font-serif font-semibold uppercase tracking-[0.12em] text-cyan-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-600 hover:text-white"
+              >
+                <i className="fab fa-linkedin-in mr-2.5 text-base" aria-hidden="true" />
+                LinkedIn
+              </a>
             </m.div>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-6 mt-12">
+            <div className="mt-10 flex justify-center gap-6">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
