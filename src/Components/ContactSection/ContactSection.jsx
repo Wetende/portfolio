@@ -5,7 +5,7 @@ import { contactData, socialLinks } from '../../data/portfolioData';
 
 const ContactSection = () => {
   const { email, phone, linkedInUrl, location, availability } = contactData;
-  const mailto = `mailto:${email}?subject=${encodeURIComponent('Remote AI Automation Specialist & RevOps')}`;
+  const mailto = `mailto:${email}?subject=${encodeURIComponent('AI Automation Specialist & RevOps')}`;
 
   return (
     <section id="contact" className="relative overflow-hidden bg-[#e4572e] py-24 text-white md:py-16">

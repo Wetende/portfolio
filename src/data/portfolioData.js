@@ -27,9 +27,9 @@ export const socialLinks = [
 ];
 
 export const heroData = {
-  eyebrow: 'Remote AI Automation Specialist & RevOps',
+  eyebrow: 'AI Automation Specialist & RevOps',
   title: 'I build the operational layer between CRM, automation, AI, and the people using it.',
-  summary: 'Kenya-based technical executor with hands-on experience configuring HubSpot workflows, building multi-step Make.com scenarios, connecting Claude and business platforms, and documenting systems so teams can maintain them.',
+  summary: 'Technical executor with hands-on experience configuring HubSpot workflows, building multi-step Make.com scenarios, connecting Claude and business platforms, and documenting systems so teams can maintain them.',
   availability: 'Available for a consistent four-hour block within 9:00 AM–5:00 PM ET',
   primaryAction: {
     label: 'Review selected systems',
@@ -37,7 +37,7 @@ export const heroData = {
   },
   secondaryAction: {
     label: 'Contact Cyprian',
-    url: `mailto:${email}?subject=${encodeURIComponent('Remote AI Automation Specialist & RevOps')}`
+    url: `mailto:${email}?subject=${encodeURIComponent('AI Automation Specialist & RevOps')}`
   },
   systemFlow: [
     { label: 'Capture', detail: 'Forms · Webhooks' },
