@@ -1,64 +1,52 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { m } from 'framer-motion';
 import { skillsData } from '../../data/portfolioData';
 
-const SkillCard = ({ icon, title, description, delay = 0 }) => (
-  <m.div
-    className="h-full"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4, delay }}
-  >
-    <div className="h-full p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-cyan-500/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group cursor-default">
-      <div className="text-cyan-600 text-4xl lg:text-5xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 inline-block">
-        <i className={icon}></i>
-      </div>
-      <h3 className="font-serif font-semibold text-darkgray text-lg mb-2 group-hover:text-cyan-600 transition-colors">
-        {title}
-      </h3>
-      <p className="font-serif text-sm text-gray-600 leading-relaxed">
-        {description}
-      </p>
-    </div>
-  </m.div>
-);
-
-const SkillsSection = () => {
-  return (
-    <section id="skills" className="py-12 md:py-16 bg-gray-50">
-      <Container>
-        {/* Section Header */}
-        <m.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="font-serif font-bold text-3xl md:text-4xl text-darkgray mb-2">
-            My <span className="text-cyan-600">Skills</span>
+const SkillsSection = () => (
+  <section id="stack" className="bg-[#fffdf8] py-24 md:py-16">
+    <Container>
+      <div className="mb-12 flex items-end justify-between gap-8 md:flex-col md:items-start">
+        <div>
+          <p className="section-kicker">Systems stack</p>
+          <h2 className="font-display !text-[clamp(3rem,5vw,5.2rem)] !font-normal !leading-none text-[#102a43]">
+            Built around the work,
+            <br />not the tool logo.
           </h2>
-          <div className="w-16 h-1 bg-cyan-600 mx-auto mt-4 rounded-full"></div>
-        </m.div>
+        </div>
+        <p className="max-w-md !m-0 text-sm leading-6 text-[#53697d]">
+          The strongest platform choice is the one that keeps data reliable, failure states visible, and ownership clear after handoff.
+        </p>
+      </div>
 
-        {/* Skills Grid - 3 cards per row, 2 rows */}
-        <Row className="g-4 justify-content-center">
-          {skillsData.map((skill, index) => (
-            <Col key={skill.title} xs={6} md={4}>
-              <SkillCard
-                icon={skill.icon}
-                title={skill.title}
-                description={skill.description}
-                delay={index * 0.1}
-              />
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
-  );
-};
+      <div className="grid grid-cols-3 border-l border-t border-[#102a43]/15 lg:grid-cols-2 sm:grid-cols-1">
+        {skillsData.map((skill, index) => (
+          <m.article
+            key={skill.title}
+            className="stack-cell border-b border-r border-[#102a43]/15 p-7"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35, delay: index * 0.04 }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <span className="font-mono text-xs text-[#e4572e]">{skill.number}</span>
+              <span className="h-2 w-2 rounded-full bg-[#0f766e]" aria-hidden="true" />
+            </div>
+            <h3 className="!mb-0 !mt-8 font-display !text-3xl !font-normal text-[#102a43]">{skill.title}</h3>
+            <p className="!mb-0 !mt-4 text-sm leading-6 text-[#53697d]">{skill.description}</p>
+            <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 border-t border-[#102a43]/10 pt-4">
+              {skill.keywords.map((keyword) => (
+                <span key={keyword} className="font-mono text-[9px] uppercase tracking-wider text-[#0f766e]">
+                  {keyword}
+                </span>
+              ))}
+            </div>
+          </m.article>
+        ))}
+      </div>
+    </Container>
+  </section>
+);
 
 export default SkillsSection;

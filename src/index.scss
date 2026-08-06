@@ -1,9 +1,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Keep portfolio typography consistent across inherited and utility-styled text. */
+:root {
+  --portfolio-ink: #102a43;
+  --portfolio-paper: #fffdf8;
+  --portfolio-sand: #f3eee3;
+  --portfolio-teal: #0f766e;
+  --portfolio-orange: #e4572e;
+  --portfolio-gold: #f6bd60;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  background: var(--portfolio-paper);
+  color: var(--portfolio-ink);
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 button,
@@ -11,4 +25,221 @@ input,
 select,
 textarea {
   font-family: inherit;
+}
+
+::selection {
+  background: var(--portfolio-gold);
+  color: var(--portfolio-ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--portfolio-gold);
+  outline-offset: 3px;
+}
+
+.portfolio-shell {
+  background: var(--portfolio-paper);
+}
+
+.portfolio-hero {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(15, 118, 110, 0.12), transparent 26rem),
+    linear-gradient(135deg, #fffdf8 0%, #f7f1e6 100%);
+}
+
+.portfolio-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16, 42, 67, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 42, 67, 0.055) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+.status-pulse {
+  position: relative;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  background: var(--portfolio-teal);
+  box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.35);
+  animation: status-pulse 2.2s infinite;
+}
+
+.portfolio-button {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.portfolio-button:hover {
+  transform: translateY(-2px);
+}
+
+.portfolio-button-primary {
+  background: var(--portfolio-ink);
+  color: white;
+}
+
+.portfolio-button-primary:hover {
+  background: var(--portfolio-teal);
+  color: white;
+}
+
+.portfolio-button-secondary {
+  border: 1px solid rgba(16, 42, 67, 0.22);
+  color: var(--portfolio-ink);
+}
+
+.portfolio-button-secondary:hover {
+  background: white;
+  color: var(--portfolio-ink);
+}
+
+.system-card {
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 199, 0.18);
+  border-radius: 1.35rem;
+  background: #0d2638;
+  box-shadow: 0 32px 90px rgba(16, 42, 67, 0.22);
+}
+
+.system-flow-step:not(:last-child)::after {
+  position: absolute;
+  top: 2.25rem;
+  bottom: 0;
+  left: 1.08rem;
+  width: 1px;
+  content: '';
+  background: rgba(125, 211, 199, 0.22);
+}
+
+.section-kicker {
+  margin: 0 0 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--portfolio-teal);
+}
+
+.section-kicker-light {
+  color: #7dd3c7;
+}
+
+.case-file {
+  box-shadow: 0 12px 45px rgba(16, 42, 67, 0.055);
+}
+
+.case-label {
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--portfolio-teal);
+}
+
+.workflow-track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.65rem;
+}
+
+.workflow-node {
+  display: flex;
+  min-height: 4.5rem;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid rgba(16, 42, 67, 0.13);
+  border-radius: 0.65rem;
+  background: white;
+  padding: 0.8rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--portfolio-ink);
+}
+
+.workflow-arrow {
+  align-self: center;
+  font-size: 0.62rem;
+  color: var(--portfolio-orange);
+}
+
+.stack-cell {
+  min-height: 19rem;
+  background: transparent;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.stack-cell:hover {
+  background: #f7f1e6;
+  transform: translateY(-3px);
+}
+
+.contact-orbit {
+  position: absolute;
+  right: -15rem;
+  top: -21rem;
+  width: 50rem;
+  height: 50rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  box-shadow:
+    0 0 0 5rem rgba(255, 255, 255, 0.035),
+    0 0 0 10rem rgba(255, 255, 255, 0.025);
+}
+
+@keyframes status-pulse {
+  70% {
+    box-shadow: 0 0 0 0.5rem rgba(15, 118, 110, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(15, 118, 110, 0);
+  }
+}
+
+@media (max-width: 991px) {
+  .workflow-track {
+    flex-direction: column;
+  }
+
+  .workflow-node {
+    min-height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .workflow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

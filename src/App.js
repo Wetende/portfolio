@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState, lazy } from "react";
 
 // Libraries
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 // Context
@@ -9,7 +9,6 @@ import GlobalContext from "./Context/Context";
 
 // Main Pages - Lazy loaded
 const HomeNew = lazy(() => import("./Pages/HomeNew"));
-const CaseStudy = lazy(() => import("./Pages/CaseStudy"));
 const Privacy = lazy(() => import("./Pages/Privacy"));
 
 function App() {
@@ -61,17 +60,13 @@ function App() {
                   element={<HomeNew style={{ "--base-color": "#0891b2" }} />}
                 />
 
-                {/* Case Study Pages */}
-                <Route
-                  path="/project/:slug"
-                  element={<CaseStudy style={{ "--base-color": "#0891b2" }} />}
-                />
-
                 {/* Privacy */}
                 <Route
                   path="/privacy"
                   element={<Privacy style={{ "--base-color": "#0891b2" }} />}
                 />
+
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

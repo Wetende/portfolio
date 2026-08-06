@@ -2,94 +2,73 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { m } from 'framer-motion';
 import { contactData, socialLinks } from '../../data/portfolioData';
-import { fadeIn } from '../../Functions/GlobalAnimations';
 
 const ContactSection = () => {
-  const { email, phone, linkedInUrl } = contactData;
+  const { email, phone, linkedInUrl, location, availability } = contactData;
+  const mailto = `mailto:${email}?subject=${encodeURIComponent('Remote AI Automation Specialist & RevOps')}`;
 
   return (
-    <section id="contact" className="bg-white py-14 font-serif md:py-20">
-      <Container>
-        {/* CTA Header */}
-        <m.div className="text-center mb-12 md:mb-16" {...fadeIn}>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-gray-100 bg-gray-50 px-5 py-7 shadow-sm sm:px-8 md:py-9">
-            <span className="mb-3 block text-xl leading-none text-cyan-600/50" aria-hidden="true">“</span>
-            <h2 className="mx-auto font-semibold text-[clamp(1.4rem,3vw,2.25rem)] leading-tight tracking-tight text-darkgray">
-              <span className="block">What we build with purpose</span>
-              <span className="block">can outlast the moment.</span>
-            </h2>
-            <p className="mt-4 font-serif text-xs font-semibold uppercase tracking-[0.22em] text-cyan-700">
-              — Dante Alighieri
-            </p>
-          </div>
-          <div className="mx-auto mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-4 gap-y-3">
-            <span className="hidden sm:block w-12 h-px bg-gray-300" />
-            <a
-              href={`mailto:${email}`}
-              className="font-serif text-base font-medium text-cyan-600 transition-colors hover:text-darkgray sm:text-lg"
-            >
-              <i className="fas fa-envelope mr-2 text-sm"></i>{email}
-            </a>
-            <span className="text-gray-300 hidden sm:inline">|</span>
-            {phone && (
-              <a
-                href={`tel:${phone.replace(/\s+/g, '')}`}
-                className="font-serif text-base font-medium text-cyan-600 transition-colors hover:text-darkgray sm:text-lg"
-              >
-                <i className="fas fa-phone mr-2 text-sm"></i>{phone}
-              </a>
-            )}
-            <span className="hidden sm:block w-12 h-px bg-gray-300" />
-          </div>
-        </m.div>
-
-        <Row className="justify-center">
-          <Col lg={8} xl={7}>
-            {/* Direct contact actions */}
+    <section id="contact" className="relative overflow-hidden bg-[#e4572e] py-24 text-white md:py-16">
+      <div className="contact-orbit" aria-hidden="true" />
+      <Container className="relative z-10">
+        <Row className="items-end g-5">
+          <Col lg={8}>
             <m.div
-              className="flex flex-wrap items-center justify-center gap-3.5 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5 }}
             >
-              <a
-                href={`mailto:${email}?subject=${encodeURIComponent(
-                  'Project inquiry from portfolio'
-                )}&body=${encodeURIComponent('Hi Cyprian,\n\nI would like to discuss an engineering collaboration...')}`}
-                className="inline-flex min-h-14 items-center justify-center rounded-full bg-cyan-600 px-8 py-4 font-serif font-semibold uppercase tracking-[0.12em] text-white shadow-lg shadow-cyan-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-darkgray hover:text-white"
-              >
-                <i className="fas fa-envelope mr-2.5 text-sm" aria-hidden="true" />
-                Email Me
-              </a>
-
-              <a
-                href={linkedInUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-cyan-600 bg-white px-8 py-4 font-serif font-semibold uppercase tracking-[0.12em] text-cyan-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-600 hover:text-white"
-              >
-                <i className="fab fa-linkedin-in mr-2.5 text-base" aria-hidden="true" />
-                LinkedIn
-              </a>
+              <p className="!m-0 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75">Ready to contribute</p>
+              <h2 className="mt-5 max-w-5xl font-display !text-[clamp(3.5rem,7vw,7.5rem)] !font-normal !leading-[0.88] tracking-[-0.035em] text-white">
+                Let’s build systems people can trust.
+              </h2>
+              <p className="mt-7 max-w-2xl text-base leading-7 text-white/80">
+                Available for hands-on CRM, automation, AI integration, API support, troubleshooting, and technical documentation work.
+              </p>
             </m.div>
+          </Col>
 
-            {/* Social Links */}
-            <div className="mt-10 flex justify-center gap-6">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 text-darkgray hover:border-cyan-600 hover:text-cyan-600 transition-colors"
-                >
-                  <i className={link.icon} />
-                </a>
-              ))}
+          <Col lg={4}>
+            <div className="rounded-2xl border border-white/20 bg-[#c94221]/40 p-6 backdrop-blur-sm">
+              <dl className="grid gap-5">
+                <div>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/65">Location</dt>
+                  <dd className="!mb-0 !mt-1 text-sm text-white">{location}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/65">Schedule overlap</dt>
+                  <dd className="!mb-0 !mt-1 text-sm leading-6 text-white">{availability}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/65">Direct contact</dt>
+                  <dd className="!mb-0 !mt-1 text-sm text-white">{phone}</dd>
+                </div>
+              </dl>
+
+              <a href={mailto} className="mt-7 flex min-h-14 items-center justify-between rounded-full bg-white px-6 text-sm font-semibold text-[#102a43] transition-transform hover:-translate-y-0.5 hover:text-[#102a43]">
+                Email Cyprian
+                <i className="fas fa-arrow-right text-xs" aria-hidden="true" />
+              </a>
+              <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 text-xs font-semibold text-white hover:bg-white/10 hover:text-white">
+                <i className="fab fa-linkedin-in" aria-hidden="true" />
+                LinkedIn profile
+              </a>
             </div>
           </Col>
         </Row>
+
+        <footer className="mt-20 flex items-center justify-between gap-5 border-t border-white/20 pt-6 text-xs text-white/65 md:mt-14 sm:flex-col sm:items-start">
+          <span>© {new Date().getFullYear()} Cyprian Wetende</span>
+          <div className="flex items-center gap-4">
+            {socialLinks.map((link) => (
+              <a key={link.platform} href={link.url} target={link.platform === 'email' ? undefined : '_blank'} rel="noreferrer" className="text-white/70 hover:text-white" aria-label={link.platform}>
+                <i className={link.icon} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+          <span className="font-mono uppercase tracking-[0.12em]">AI automation · RevOps · integration</span>
+        </footer>
       </Container>
     </section>
   );

@@ -11,8 +11,10 @@ module.exports = {
       'mxl': { 'raw': '(min-width: 1921px)' },
     },
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
-      serif: ['Poppins', 'sans-serif'],
+      sans: ['IBM Plex Sans', 'sans-serif'],
+      serif: ['IBM Plex Sans', 'sans-serif'],
+      display: ['Instrument Serif', 'Georgia', 'serif'],
+      mono: ['IBM Plex Mono', 'monospace'],
     },
     extend: {
       fontSize: {
@@ -32,8 +34,8 @@ module.exports = {
         8: '8px'
       },
       colors: {
-        primary: '#0891b2', // Pacific Cyan
-        secondary: '#0f172a', // Slate Navy
+        primary: '#0f766e', // Operational teal
+        secondary: '#102a43', // Blueprint navy
         text: '#334155', // Graphite
         accent: '#6366f1', // Data Purple
         
