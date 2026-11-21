@@ -73,9 +73,19 @@ export const recentExperience = [
 // Skills Data (card-based layout - zero image)
 export const skillsData = [
   {
+    icon: 'fas fa-layer-group',
+    title: 'Full-Stack Development',
+    description: 'Delivering applications end to end: React and Next.js interfaces, Python backend services, API integrations, and data layers for business, learning, and AI platforms.'
+  },
+  {
     icon: 'fas fa-code',
     title: 'Frontend & Product Design',
-    description: 'Building responsive applications and product interfaces using JavaScript/TypeScript, React.js, Next.js, Vite, modern CSS, and custom CMS/LMS platforms.'
+    description: 'Building responsive websites and product interfaces with JavaScript/TypeScript, React.js, Next.js, HTML, CSS, and Vite, including custom CMS and LMS experiences.'
+  },
+  {
+    icon: 'fas fa-server',
+    title: 'Backend & API Engineering',
+    description: 'Building Python services with Django, Django REST Framework, and FastAPI; designing REST APIs, connecting external services, and implementing authentication and workflow automation.'
   },
   {
     icon: 'fas fa-robot',
@@ -83,24 +93,29 @@ export const skillsData = [
     description: 'Agentic AI and multi-agent orchestration, Claude API integration, LLM/RAG workflows, vector embeddings, and automated opportunity fetching, evaluation, and bid-assessment drafting.'
   },
   {
-    icon: 'fas fa-wallet',
-    title: 'Fintech & API Design',
-    description: 'Engineering secure payment rails including Paystack, DPO, M-Pesa APIs, RESTful API design, EVM wallets, and USSD cross-border remittances.'
-  },
-  {
-    icon: 'fas fa-server',
-    title: 'Cloud & IT Systems',
-    description: 'AWS Amplify Gen 2, Cognito, DynamoDB, Lambda, EC2, S3, RDS, IAM, Route 53, and CloudFront; Docker environments, infrastructure deployment, and IT systems support.'
-  },
-  {
     icon: 'fas fa-database',
-    title: 'Data & AI Evaluation',
-    description: 'Python scientific workflows, multi-omics data validation, LLM evaluation and benchmarking, verifiable ground-truth creation, Jest, and unit/integration testing.'
+    title: 'Databases & Data Workflows',
+    description: 'Working with PostgreSQL, MySQL, and DynamoDB to support application data layers, structured datasets, data validation, and reproducible Python processing pipelines.'
+  },
+  {
+    icon: 'fas fa-cloud',
+    title: 'Cloud & DevOps',
+    description: 'Deploying with AWS Amplify Gen 2, Cognito, Lambda, EC2, S3, RDS, IAM, Route 53, and CloudFront; using Docker, Docker Compose, Git, and GitHub for consistent delivery.'
+  },
+  {
+    icon: 'fas fa-wallet',
+    title: 'Fintech & Payment Integrations',
+    description: 'Integrating M-Pesa, Paystack, DPO, and MTN Mobile Money, alongside cryptocurrency, EVM wallet, and USSD workflows for local and cross-border payments.'
+  },
+  {
+    icon: 'fas fa-check-circle',
+    title: 'Testing & AI Evaluation',
+    description: 'Using Jest, unit and integration testing, LLM evaluation, benchmarking, and verifiable ground truths to validate application behavior and scientific data workflows.'
   },
   {
     icon: 'fas fa-file-alt',
-    title: 'Technical Communication',
-    description: 'Translating intricate business requirements into clear technical specifications, system architecture guidelines, SOPs, and executive presentations.'
+    title: 'IT Support & Documentation',
+    description: 'Troubleshooting hardware, software, and infrastructure; translating business needs into technical specifications, system documentation, SOPs, and stakeholder presentations.'
   }
 ];
 

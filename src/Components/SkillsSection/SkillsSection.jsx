@@ -13,7 +13,7 @@ const SkillCard = ({ icon, title, description, delay = 0 }) => (
   >
     <div className="h-full p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-cyan-500/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group cursor-default">
       <div className="text-cyan-600 text-4xl lg:text-5xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 inline-block">
-        <i className={icon}></i>
+        <i className={icon} aria-hidden="true"></i>
       </div>
       <h3 className="font-serif font-semibold text-darkgray text-lg mb-2 group-hover:text-cyan-600 transition-colors">
         {title}
@@ -41,17 +41,20 @@ const SkillsSection = () => {
             My <span className="text-cyan-600">Skills</span>
           </h2>
           <div className="w-16 h-1 bg-cyan-600 mx-auto mt-4 rounded-full"></div>
+          <p className="mx-auto mt-6 max-w-3xl font-serif text-sm text-gray-600 leading-relaxed">
+            From product interfaces and backend APIs to databases, cloud deployment, and AI automation.
+          </p>
         </m.div>
 
-        {/* Skills Grid - 3 cards per row, 2 rows */}
+        {/* One column on phones, two on tablets, three on desktop. */}
         <Row className="g-4 justify-content-center">
           {skillsData.map((skill, index) => (
-            <Col key={skill.title} xs={6} md={4}>
+            <Col key={skill.title} xs={12} sm={6} lg={4}>
               <SkillCard
                 icon={skill.icon}
                 title={skill.title}
                 description={skill.description}
-                delay={index * 0.1}
+                delay={(index % 3) * 0.08}
               />
             </Col>
           ))}
