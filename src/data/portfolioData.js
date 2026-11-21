@@ -131,7 +131,7 @@ export const projectsData = [
     title: 'Daystar University – Web & E-Learning Modernization',
     category: ['Full-Stack Development', 'Frontend UI/UX', 'AI Automation', 'Web Infrastructure'],
     icon: 'fas fa-university',
-    description: 'Modernized the institutional web presence using React and consolidated scattered projects into a unified codebase. Implemented AWS Cognito authentication for the e-learning portal, with AI-driven virtual assistance and automated content delivery workflows.',
+    description: 'Built the Daystar University website using React and consolidated scattered projects into a unified codebase. Implemented AWS Cognito authentication for the e-learning portal, with AI-driven virtual assistance and automated content delivery workflows.',
     url: 'https://new.daystar.ac.ke/',
     techStack: [
       { name: 'React', color: '#61DAFB' },
@@ -154,53 +154,6 @@ export const projectsData = [
       { name: 'Vue', color: '#4FC08D' },
       { name: 'PostgreSQL', color: '#336791' },
       { name: 'Web3', color: '#8C8C8C' }
-    ]
-  },
-  {
-    id: '2',
-    slug: 'crossview',
-    title: 'CrossView – Canonical LMS Engine',
-    category: ['Full-Stack Development', 'Backend Systems', 'Containerization', 'Web Infrastructure', 'LMS Engine'],
-    icon: 'fas fa-graduation-cap',
-    metric: 'Canonical Shared Engine · Scalable Architecture',
-    description: 'Canonical parent LMS shared engine and educational academy platform governing course builder architectures, student progression tracking, prerequisites, drip access scheduling, and unified institute assessment pipelines.',
-    techStack: [
-      { name: 'Python', color: '#3776AB' },
-      { name: 'Django', color: '#092E20' },
-      { name: 'Inertia.js', color: '#9553E9' },
-      { name: 'PostgreSQL', color: '#336791' },
-      { name: 'Docker', color: '#2496ED' }
-    ]
-  },
-  {
-    id: '3',
-    slug: 'digikatech',
-    title: 'DigiKaTech – Technical Career & EdTech Platform',
-    category: ['Full-Stack Development', 'Frontend UI/UX', 'Fintech Solutions', 'EdTech Systems'],
-    icon: 'fas fa-laptop-code',
-    metric: 'Unified SPA · Instant M-Pesa Checkout',
-    description: 'Technical career and EdTech platform with dynamic content built using Next.js, digital learning pathways, and M-Pesa and Paystack payment integrations.',
-    techStack: [
-      { name: 'Next.js', color: '#111827' },
-      { name: 'React', color: '#61DAFB' },
-      { name: 'M-Pesa API', color: '#10B981' },
-      { name: 'Paystack API', color: '#00C3F7' }
-    ]
-  },
-  {
-    id: '4',
-    slug: 'airads',
-    title: 'AirAds – Educational Institute & LMS Laboratory',
-    category: ['Full-Stack Development', 'Backend Systems', 'API Testing', 'Product Design'],
-    icon: 'fas fa-university',
-    metric: 'Active Engine Lab · Paystack Commerce',
-    description: 'Active educational institute and LMS innovation laboratory governing course builder architectures, automated Paystack commerce, campus enrollment workflows, and high-availability student portals.',
-    techStack: [
-      { name: 'Python', color: '#3776AB' },
-      { name: 'Django', color: '#092E20' },
-      { name: 'PostgreSQL', color: '#336791' },
-      { name: 'Inertia.js', color: '#9553E9' },
-      { name: 'Paystack API', color: '#00C3F7' }
     ]
   },
   {
@@ -227,6 +180,55 @@ export const projectsData = [
       { name: 'React / Next.js', color: '#61DAFB' },
       { name: 'AI Automation', color: '#FF6F00' },
       { name: 'Vector Retrieval', color: '#E91E63' }
+    ]
+  },
+  {
+    id: '4',
+    slug: 'airads',
+    url: 'https://airads.ac.ke/',
+    title: 'AirAds – Educational Institute & LMS Laboratory',
+    category: ['Full-Stack Development', 'Backend Systems', 'API Testing', 'Product Design'],
+    icon: 'fas fa-university',
+    metric: 'Active Engine Lab · Paystack Commerce',
+    description: 'Active educational institute and LMS innovation laboratory governing course builder architectures, automated Paystack commerce, campus enrollment workflows, and high-availability student portals.',
+    techStack: [
+      { name: 'Python', color: '#3776AB' },
+      { name: 'Django', color: '#092E20' },
+      { name: 'PostgreSQL', color: '#336791' },
+      { name: 'Inertia.js', color: '#9553E9' },
+      { name: 'Paystack API', color: '#00C3F7' }
+    ]
+  },
+  {
+    id: '3',
+    slug: 'digikatech',
+    url: 'https://digikatech.com/',
+    title: 'DigiKaTech – Technical Career & EdTech Platform',
+    category: ['Full-Stack Development', 'Frontend UI/UX', 'Fintech Solutions', 'EdTech Systems'],
+    icon: 'fas fa-laptop-code',
+    metric: 'Unified SPA · Instant M-Pesa Checkout',
+    description: 'Technical career and EdTech platform with dynamic content built using Next.js, digital learning pathways, and M-Pesa and Paystack payment integrations.',
+    techStack: [
+      { name: 'Next.js', color: '#111827' },
+      { name: 'React', color: '#61DAFB' },
+      { name: 'M-Pesa API', color: '#10B981' },
+      { name: 'Paystack API', color: '#00C3F7' }
+    ]
+  },
+  {
+    id: '2',
+    slug: 'crossview',
+    title: 'CrossView – Canonical LMS Engine',
+    category: ['Full-Stack Development', 'Backend Systems', 'Containerization', 'Web Infrastructure', 'LMS Engine'],
+    icon: 'fas fa-graduation-cap',
+    metric: 'Canonical Shared Engine · Scalable Architecture',
+    description: 'Canonical parent LMS shared engine and educational academy platform governing course builder architectures, student progression tracking, prerequisites, drip access scheduling, and unified institute assessment pipelines.',
+    techStack: [
+      { name: 'Python', color: '#3776AB' },
+      { name: 'Django', color: '#092E20' },
+      { name: 'Inertia.js', color: '#9553E9' },
+      { name: 'PostgreSQL', color: '#336791' },
+      { name: 'Docker', color: '#2496ED' }
     ]
   },
   {
