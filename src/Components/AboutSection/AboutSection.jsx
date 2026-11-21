@@ -75,7 +75,11 @@ const AboutSection = () => {
                   {recentExperience.map((experience) => (
                     <li key={experience.organization}>
                       <h4 className="font-serif font-semibold text-base text-darkgray !mb-1">
-                        {experience.role} · {experience.organization}
+                        {experience.role} · {experience.url ? (
+                          <a href={experience.url} target="_blank" rel="noopener noreferrer" className="text-cyan-700 underline underline-offset-4 hover:text-darkgray focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700">
+                            {experience.organization}
+                          </a>
+                        ) : experience.organization}
                       </h4>
                       <p className="font-serif text-sm text-gray-600 !mb-2">{experience.period}</p>
                       <p className="font-serif text-sm text-gray-600 leading-relaxed !mb-0">{experience.description}</p>

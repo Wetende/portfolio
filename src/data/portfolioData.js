@@ -64,6 +64,7 @@ export const recentExperience = [
   {
     role: 'Scientific AI Systems & Research Engineer',
     organization: 'Daystar University',
+    url: 'https://new.daystar.ac.ke/',
     period: 'Dec 2025 – Apr 2026',
     description: 'Built Python pipelines for multi-omics data validation and LLM evaluation, modernized the React web experience, and implemented AWS Cognito authentication for the e-learning portal.'
   }
@@ -125,8 +126,23 @@ export const projectsData = [
     ]
   },
   {
+    id: '8',
+    slug: 'daystar-university',
+    title: 'Daystar University – Web & E-Learning Modernization',
+    category: ['Full-Stack Development', 'Frontend UI/UX', 'AI Automation', 'Web Infrastructure'],
+    icon: 'fas fa-university',
+    description: 'Modernized the institutional web presence using React and consolidated scattered projects into a unified codebase. Implemented AWS Cognito authentication for the e-learning portal, with AI-driven virtual assistance and automated content delivery workflows.',
+    url: 'https://new.daystar.ac.ke/',
+    techStack: [
+      { name: 'React', color: '#61DAFB' },
+      { name: 'AWS Cognito', color: '#8C4FFF' },
+      { name: 'AI Integration', color: '#C56800' }
+    ]
+  },
+  {
     id: '1',
     slug: 'zadepay',
+    url: 'https://zadepay.com/',
     title: 'ZadePay – Crypto Onramp & African Fiat Gateway',
     category: ['Fintech Solutions', 'Backend Systems', 'Full-Stack Development', 'API Design', 'Web3 / Smart Contracts'],
     icon: 'fas fa-wallet',
