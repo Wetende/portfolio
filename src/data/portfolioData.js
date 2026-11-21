@@ -159,6 +159,7 @@ export const projectsData = [
   {
     id: '5',
     slug: 'kyrochat',
+    url: 'https://kyrochat.com/',
     title: 'KyroChat – AI Agent & Automation Platform',
     category: [
       'AI/ML Integration',
