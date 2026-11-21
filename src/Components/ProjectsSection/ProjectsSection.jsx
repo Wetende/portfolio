@@ -21,7 +21,10 @@ const ProjectsSection = () => {
     'Web3 / Smart Contracts',
     'Python',
     'Django',
-    'FastAPI'
+    'FastAPI',
+    'Next.js',
+    'TypeScript',
+    'AWS Amplify Gen 2'
   ];
 
   const displayedProjects = activeFilter === 'All'
@@ -44,7 +47,7 @@ const ProjectsSection = () => {
             Featured Projects
           </h2>
           <p className="font-serif text-sm md:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A selection of real-world fintech payment gateways, canonical LMS architectures, and omnichannel AI platforms engineered for scale across African and global ecosystems.
+            Selected work in consultant and tender staffing, AI automation, fintech payments, digital learning, and order management.
           </p>
         </m.div>
 

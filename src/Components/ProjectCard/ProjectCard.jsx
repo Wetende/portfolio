@@ -2,7 +2,7 @@ import React from 'react';
 import { m } from 'framer-motion';
 
 const ProjectCard = ({ project }) => {
-  const { title, category, description, icon, metric, techStack } = project;
+  const { title, category, description, icon, metric, techStack, url } = project;
 
   return (
     <m.div
@@ -32,6 +32,19 @@ const ProjectCard = ({ project }) => {
       <p className="text-gray-600 font-serif text-sm md:text-base leading-relaxed mb-6 max-w-4xl">
         {description}
       </p>
+
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit ${title} website`}
+          className="inline-flex min-h-11 items-center gap-2 mb-4 rounded text-sm font-semibold text-cyan-700 underline underline-offset-4 hover:text-darkgray focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700"
+        >
+          Visit project website
+          <i className="fas fa-external-link-alt text-xs" aria-hidden="true" />
+        </a>
+      )}
 
       {/* Tech Stack bullet list */}
       {techStack && (

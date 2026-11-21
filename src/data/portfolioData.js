@@ -42,29 +42,44 @@ export const heroData = {
 
 // About Section Data
 export const aboutData = {
-  bio: 'With a comprehensive background spanning IT engineering, enterprise architecture, and AI integrations, I design and deliver practical digital platforms that solve complex operational problems. My work focuses on high-availability system reliability, secure cross-border fintech workflows, and transforming technical requirements into scalable, real-world solutions.',
+  bio: 'I build full-stack applications, agentic AI systems, and reproducible computational workflows using Python and JavaScript/TypeScript. My work spans consultant and tender-staffing platforms, scientific data processing, AI customer support, digital learning, and secure fintech integrations. I bring hands-on customer support experience into the systems I build, with a focus on practical business needs, reliable delivery, and verifiable results.',
   yearsExperience: 5,
   specializations: [
     'Frontend & Product Design',
-    'JavaScript / React.js SPA',
+    'Python / TypeScript / Next.js',
     'AI Workflow & Automation',
     'Fintech & API Design',
-    'IT Systems & Support',
+    'AWS & IT Systems',
     'Technical Communication'
   ]
 };
+
+export const recentExperience = [
+  {
+    role: 'Full-Stack Developer',
+    organization: 'T4G Lab',
+    period: 'May 2026 – Present',
+    description: 'Delivering full-stack consulting applications and agentic AI workflows. Built T4G Impact Roster for consultant staffing, automated opportunity evaluation, and bid-assessment drafting.'
+  },
+  {
+    role: 'Scientific AI Systems & Research Engineer',
+    organization: 'Daystar University',
+    period: 'Dec 2025 – Apr 2026',
+    description: 'Built Python pipelines for multi-omics data validation and LLM evaluation, modernized the React web experience, and implemented AWS Cognito authentication for the e-learning portal.'
+  }
+];
 
 // Skills Data (card-based layout - zero image)
 export const skillsData = [
   {
     icon: 'fas fa-code',
     title: 'Frontend & Product Design',
-    description: 'Building responsive Single-Page Applications (SPAs) and product interfaces using JavaScript (ES6+), React.js, Vite, modern CSS, and custom CMS/LMS platforms.'
+    description: 'Building responsive applications and product interfaces using JavaScript/TypeScript, React.js, Next.js, Vite, modern CSS, and custom CMS/LMS platforms.'
   },
   {
     icon: 'fas fa-robot',
     title: 'AI Workflow & Automation',
-    description: 'AI agent orchestration, Zapier/Make automations, LLM integration, and Retrieval-Augmented Generation (RAG) using vector embeddings and custom knowledge bases.'
+    description: 'Agentic AI and multi-agent orchestration, Claude API integration, LLM/RAG workflows, vector embeddings, and automated opportunity fetching, evaluation, and bid-assessment drafting.'
   },
   {
     icon: 'fas fa-wallet',
@@ -73,13 +88,13 @@ export const skillsData = [
   },
   {
     icon: 'fas fa-server',
-    title: 'IT & Systems Management',
-    description: 'Enterprise hardware & software management, IT help desk leadership, system troubleshooting, infrastructure deployment, and cloud governance.'
+    title: 'Cloud & IT Systems',
+    description: 'AWS Amplify Gen 2, Cognito, DynamoDB, Lambda, EC2, S3, RDS, IAM, Route 53, and CloudFront; Docker environments, infrastructure deployment, and IT systems support.'
   },
   {
     icon: 'fas fa-database',
-    title: 'Data & AI Operations',
-    description: 'Detailed data annotation, image labeling, NLP dataset validation, process mapping, and machine learning pipeline evaluation ensuring high accuracy.'
+    title: 'Data & AI Evaluation',
+    description: 'Python scientific workflows, multi-omics data validation, LLM evaluation and benchmarking, verifiable ground-truth creation, Jest, and unit/integration testing.'
   },
   {
     icon: 'fas fa-file-alt',
@@ -90,6 +105,25 @@ export const skillsData = [
 
 // Projects Data
 export const projectsData = [
+  {
+    id: '6',
+    slug: 't4g-impact-roster',
+    title: 'T4G Impact Roster – Consultant Roster & Tender Staffing',
+    category: ['AI Automation', 'Full-Stack Development', 'API Design', 'Backend Systems', 'AI/ML Integration'],
+    icon: 'fas fa-users',
+    metric: 'Opportunity Evaluation · AI Bid Assessments',
+    description: 'Built T4G Impact Roster, a consultant roster and tender-staffing platform. Delivered automated DevelopmentAid opportunity fetching and evaluation, Claude-drafted bid assessments, and admin notifications.',
+    url: 'https://roster.t4gimpact.com/website',
+    techStack: [
+      { name: 'Next.js', color: '#111827' },
+      { name: 'TypeScript', color: '#3178C6' },
+      { name: 'AWS Amplify Gen 2', color: '#C56800' },
+      { name: 'Cognito', color: '#8C4FFF' },
+      { name: 'DynamoDB', color: '#4053D6' },
+      { name: 'Lambda', color: '#C56800' },
+      { name: 'Claude API', color: '#B5654A' }
+    ]
+  },
   {
     id: '1',
     slug: 'zadepay',
@@ -129,13 +163,12 @@ export const projectsData = [
     category: ['Full-Stack Development', 'Frontend UI/UX', 'Fintech Solutions', 'EdTech Systems'],
     icon: 'fas fa-laptop-code',
     metric: 'Unified SPA · Instant M-Pesa Checkout',
-    description: 'Modern digital technical institute platform providing public edtech pathways, instant M-Pesa and Paystack payment checkout, interactive student learning progression, and unified single-page application navigation.',
+    description: 'Technical career and EdTech platform with dynamic content built using Next.js, digital learning pathways, and M-Pesa and Paystack payment integrations.',
     techStack: [
-      { name: 'Django', color: '#092E20' },
-      { name: 'Inertia.js', color: '#9553E9' },
+      { name: 'Next.js', color: '#111827' },
       { name: 'React', color: '#61DAFB' },
       { name: 'M-Pesa API', color: '#10B981' },
-      { name: 'Vite', color: '#646CFF' }
+      { name: 'Paystack API', color: '#00C3F7' }
     ]
   },
   {
@@ -169,14 +202,28 @@ export const projectsData = [
     ],
     icon: 'fas fa-robot',
     metric: 'Shared Bot Core · Omnichannel RAG',
-    description: 'Enterprise AI agent and automation platform for customer support and operations, built around a shared bot core with custom knowledge vector retrieval, guardrails, and multi-channel adapters (Website Widget, WhatsApp, Slack).',
+    description: 'AI customer support and automation platform built after handling recurring order, delivery, refund, and payment issues at Soko Kijiji. Uses Python, Django/DRF, and LLM/RAG workflows for backend orchestration, task automation, and knowledge retrieval across support channels.',
     techStack: [
       { name: 'Python', color: '#3776AB' },
-      { name: 'FastAPI', color: '#009688' },
+      { name: 'Django', color: '#092E20' },
+      { name: 'Django REST Framework', color: '#A30000' },
       { name: 'JavaScript / ES6+', color: '#F7DF1E' },
       { name: 'React / Next.js', color: '#61DAFB' },
       { name: 'AI Automation', color: '#FF6F00' },
       { name: 'Vector Retrieval', color: '#E91E63' }
+    ]
+  },
+  {
+    id: '7',
+    slug: 'writeminds-pro',
+    title: 'Writeminds-Pro – Order Management Platform',
+    category: ['Full-Stack Development', 'Backend Systems', 'API Design', 'Product Design'],
+    icon: 'fas fa-tasks',
+    description: 'Developed an order management platform using FastAPI and React, connecting the user interface with backend services and order workflows.',
+    techStack: [
+      { name: 'Python', color: '#3776AB' },
+      { name: 'FastAPI', color: '#009688' },
+      { name: 'React', color: '#61DAFB' }
     ]
   }
 ];
@@ -187,6 +234,7 @@ export const contactData = {
   email: 'cyprianwetende@gmail.com',
   linkedInUrl: 'https://www.linkedin.com/in/cyprian-wetende-289921324/',
   githubUrl: 'https://github.com/Wetende',
+  cvUrl: `${import.meta.env.BASE_URL}Cyprian_Wetende_CV.pdf`,
   ctaText: "Let's build innovative solutions together?"
 };
 

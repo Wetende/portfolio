@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { m } from 'framer-motion';
-import { aboutData } from '../../data/portfolioData';
+import { aboutData, recentExperience } from '../../data/portfolioData';
 import { fadeIn, fadeInLeft } from '../../Functions/GlobalAnimations';
 
 const competencyCards = [
@@ -68,6 +68,20 @@ const AboutSection = () => {
                     {spec}
                   </span>
                 ))}
+              </div>
+              <div className="mt-8">
+                <h3 className="font-serif font-semibold text-lg text-darkgray mb-4">Recent Experience</h3>
+                <ul className="space-y-5">
+                  {recentExperience.map((experience) => (
+                    <li key={experience.organization}>
+                      <h4 className="font-serif font-semibold text-base text-darkgray !mb-1">
+                        {experience.role} · {experience.organization}
+                      </h4>
+                      <p className="font-serif text-sm text-gray-600 !mb-2">{experience.period}</p>
+                      <p className="font-serif text-sm text-gray-600 leading-relaxed !mb-0">{experience.description}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <blockquote className="mt-10 border-l-4 border-darkgray pl-6 sm:pl-5">
                 <p className="font-serif text-lg italic leading-relaxed text-darkgray !mb-0">

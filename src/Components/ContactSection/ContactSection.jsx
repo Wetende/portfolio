@@ -5,7 +5,7 @@ import { contactData, socialLinks } from '../../data/portfolioData';
 import { fadeIn } from '../../Functions/GlobalAnimations';
 
 const ContactSection = () => {
-  const { email, phone, linkedInUrl } = contactData;
+  const { email, phone, linkedInUrl, cvUrl } = contactData;
 
   return (
     <section id="contact" className="bg-white py-14 font-serif md:py-20">
@@ -71,6 +71,14 @@ const ContactSection = () => {
               >
                 <i className="fab fa-linkedin-in mr-2.5 text-base" aria-hidden="true" />
                 LinkedIn
+              </a>
+              <a
+                href={cvUrl}
+                download="Cyprian_Wetende_CV.pdf"
+                className="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-darkgray bg-white px-8 py-4 font-serif font-semibold uppercase tracking-[0.12em] text-darkgray transition-colors hover:bg-darkgray hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700"
+              >
+                <i className="fas fa-download mr-2.5 text-sm" aria-hidden="true" />
+                Download CV
               </a>
             </m.div>
 
